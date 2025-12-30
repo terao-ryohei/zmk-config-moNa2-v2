@@ -77,7 +77,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E   &kp R          &kp T                                               &kp Y                   &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D   &kp F          &kp G                                  &trans       &kp H                   &kp J  &kp K      &kp L    &kp SEMICOLON
+&kp A             &kp S         &kp D   &kp F          &kp G                                  &mkp LCLK    &kp H                   &kp J  &kp K      &kp L    &kp SEMICOLON
 &mt LEFT_SHIFT Z  &kp X         &kp C   &kp V          &kp B        &lt_to_layer_0 5 LANG5    &mkp RCLK    &kp N                   &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LEFT_CONTROL  &kp LEFT_WIN  &trans  &kp BACKSPACE  &lt 2 SPACE  &mkp LCLK                 &lt 3 ENTER  &lt_to_layer_0 4 LANG2                             &kp LEFT_ALT
             >;
