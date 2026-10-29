@@ -72,7 +72,7 @@ It can also be changed at runtime from DYA Studio.
 ## Local deltas from upstream
 
 - `config/mona2.keymap` - own keymap
-- `boards/shields/mona2/mona2.dtsi` - left encoder enabled, steps 24, triggers-per-rotation 4
+- `boards/shields/mona2/mona2.dtsi` - encoder steps 24, triggers-per-rotation 4 (enabled only in `mona2_l.overlay`; the right half uses D5/D0 for the trackball SPI SCK / MOTION)
 - `boards/shields/mona2/mona2_r.overlay` - scroll layers = 3 and 6, temp-layer (auto-mouse) to layer 5
 - `config/mona2_r.conf` - PMW3610 axis inversion for COROPIT, default-layer range 0..0
 
