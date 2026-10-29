@@ -54,8 +54,11 @@ It can also be changed at runtime from DYA Studio.
 
 **Trackball Features:**
 - All layers: cursor movement via `&mouse_runtime_input_processor`
-- Auto-mouse: moving the ball activates layer 5 (MOUSE: J/K/L = left/right/middle click) via the temp-layer of `&mouse_runtime_input_processor`. Delays are adjustable in DYA Studio
-- Layer 3 (hold Space): scroll mode via `&scroll_runtime_input_processor` (`active-layers = 0x08`)
+- Auto-mouse: moving the ball activates layer 5 (MOUSE) via the temp-layer of `&mouse_runtime_input_processor`. Delays are adjustable in DYA Studio
+  - Layer 5: J = left click, K = right click, ; = middle click, L (hold) = layer 6 scroll, M = back (MB4), , = forward (MB5). Left hand is transparent so typing exits
+- Scroll mode via `&scroll_runtime_input_processor` on layer 3 (hold Space) and layer 6 (hold L in layer 5) (`active-layers = 0x48`)
+- Base layer positions 15/27 (right inner column) are `-` / Esc
+- Keymap design rationale and staged plan: `docs/keymap-redesign.md`
 - CPI 600 in overlay (adjustable in DYA Studio)
 
 **Key Configuration Details:**
@@ -70,7 +73,7 @@ It can also be changed at runtime from DYA Studio.
 
 - `config/mona2.keymap` - own keymap
 - `boards/shields/mona2/mona2.dtsi` - left encoder enabled, steps 24, triggers-per-rotation 4
-- `boards/shields/mona2/mona2_r.overlay` - scroll layer = 3, temp-layer (auto-mouse) to layer 5
+- `boards/shields/mona2/mona2_r.overlay` - scroll layers = 3 and 6, temp-layer (auto-mouse) to layer 5
 - `config/mona2_r.conf` - PMW3610 axis inversion for COROPIT, default-layer range 0..0
 
 ## Development Workflow
