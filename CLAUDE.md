@@ -83,3 +83,6 @@ It can also be changed at runtime from DYA Studio.
 3. Hardware changes require editing `.overlay` and `.dtsi` files in `boards/shields/mona2/`
 4. Push to trigger GitHub Actions build via `.github/workflows/build.yml`
 5. Download .uf2 files from Actions artifacts and flash to keyboard
+   - ZMK のバージョンをまたぐ更新 (旧 v0.3 系 → 現 main+dya) では、左右**両方**に `settings_reset` を焼いてから本体を焼く。
+     片側だけだと左手に旧 bond が残り、左 LED が起動時 緑→赤 (未接続) のまま繋がらない (2026-10-29 実機で確認)
+   - settings_reset はコピー後 10 秒ほど待って起動させてから次を焼く。左右の uf2 は同じビルドの zip から取る
