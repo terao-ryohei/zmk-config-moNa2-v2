@@ -103,8 +103,8 @@
         compatible = "alps,ec11";
         a-gpios = <&xiao_d 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         b-gpios = <&xiao_d 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        steps = <96>;
-        status = "disabled";
+        steps = <24>;
+        status = "okay";
     };
 
     right_encoder: encoder_right {
@@ -114,7 +114,7 @@
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;
-        triggers-per-rotation = <24>;
+        triggers-per-rotation = <4>;
     };
 
 };
